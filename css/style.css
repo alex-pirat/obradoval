@@ -483,6 +483,7 @@ a:hover {
   z-index: 999;
 }
 
+
 .mega_menu > li > ul .h3 {
   color: white;
   margin: 0 0 15px 0;
@@ -2941,6 +2942,13 @@ a:hover {
 		width: 100%;
                 z-index: inherit;
 	}
+       
+        
+}
+@media only screen and (min-width: 580px) {
+     .mega_menu > li:hover > ul {
+        display:block;
+        }
 }
 
 @media only screen and (max-width: 560px) {

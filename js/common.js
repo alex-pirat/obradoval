@@ -249,6 +249,10 @@ $(function() {
                 
                 return false;
                 })
+                } else {
+                    
+                  $('.mega_menu > li .tab-content').removeClass('current');  
+                  $('.mega_menu > li').removeClass('current')
                 } 
                 
           }
