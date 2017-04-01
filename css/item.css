@@ -415,10 +415,7 @@ line-height: 18px;
 }
 
 .tabs-menu label.current {
-	width: 32%;
-	border: 1px #3fb045 solid;
-	padding: 20px;
-	display: inline-block;
+
 	background-color: #3fb045;
 }
 
@@ -441,10 +438,8 @@ line-height: 18px;
 
 
 
-.tab {
-	max-width: 568px;
-	max-height: 568px;
-}
+
+
 
 .taber-cont img {
 	margin: 0 auto;
@@ -492,6 +487,7 @@ line-height: 18px;
     border: 1px #3fb045 solid;
     padding: 10px;
     display: inline-block;
+   
 
 }
 
@@ -505,4 +501,8 @@ line-height: 18px;
 
 .products_item_status:after, .products_item_spec:after{
 	content: none;
+}
+
+.products_item_status {
+    
 }
