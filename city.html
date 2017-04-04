@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>Title</title>
+	<title>City_obradoval</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,12 +17,12 @@
 	<meta name="msapplication-navbutton-color" content="#000">
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
-	<link rel="stylesheet" href="libs/bootstrap-grid/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic" rel="stylesheet">	<link rel="stylesheet" href="libs/bootstrap-grid/bootstrap.min.css">
 	<link rel="stylesheet" href="libs/jQueryFormStyler-master/jquery.formstyler.css">
 	<link rel="stylesheet" href="libs/jquery-ui-1.11.4.custom/jquery-ui.min.css">
 	<link rel="stylesheet" href="libs/slick-1.6.0/slick/slick.css">
 	<link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="css/style-city.css">
+    <link rel="stylesheet" href="css/style-city.css">
 
 </head>
 <body>
@@ -79,6 +79,7 @@
 	<!-- block_1 -->
 	<div class="block_1">
 		<a href="/" class="logo left">
+			<img class="mob" src="img/logo_mobile_2.png">
 			<span class="logo_text__top">Обрадовал<sup>.ру</sup> <br></span>
 			<span class="logo_text__bottom">Доставка цветов и подарков</span>
 		</a>
@@ -170,7 +171,7 @@
 								<ul id="tbt-1">
 									<li><a href="">С розами</a></li>
 									<li><a href="">С ирисами</a></li>
-									<li><a href="">Букеты невесты</a></li>
+									<li><a class="color_1" href="">Букеты невесты</a></li>
 									<li><a href="">С ромашками</a></li>
 									<li><a href="">С душистыми розами</a></li>
 									<li><a href="">С тюльпанами</a></li>
@@ -185,7 +186,7 @@
 									<li><a href="">С анемонами (маками)</a></li>
 									<li><a href="">С герберами</a></li>
 									<li><a href="">С нарцисами</a></li>
-									<li><a href="">С ранункулюсами</a></li>
+									<li><a class="color_2" href="">С ранункулюсами</a></li>
 									<li><a href="">Коллекция ИЛЬ ДЭ БОТЭ</a></li>
 									<li><a href="">С мимозой</a></li>
 								</ul>
@@ -196,7 +197,7 @@
 									<li><a href="">С розами</a></li>
 									<li><a href="">Подарочные корзины</a></li>
 									<li><a href="">С герберами</a></li>
-									<li><a href="">Сердца из цветов</a></li>
+									<li><a class="color_3" href="">Сердца из цветов</a></li>
 									<li><a href="">С ромашками</a></li>
 									<li><a href="">С французскими розами</a></li>
 									<li><a href="">С тюльпанами</a></li>
@@ -215,10 +216,10 @@
 								<ul id="tbt-3">
 									<li><a href="">Тюльпаны</a></li>
 									<li><a href="">Розы</a></li>
-									<li><a href="">Розы душистые</a></li>
+									<li><a class="color_4" href="">Розы душистые</a></li>
 									<li><a href="">Гиацинты</a></li>
 									<li><a href="">Ирисы</a></li>
-									<li><a href="">Пионы</a></li>
+									<li><a class="color_5" href="">Пионы</a></li>
 									<li><a href="">Каллы</a></li>
 								</ul>
 							</div>
@@ -314,13 +315,12 @@
 				</div>
 			</div><!-- END row -->
 		</div><!-- END container -->
-		<div class="search_block">
+		<div class="search_block ">
 			<input type="text" placeholder="Букет из роз">
 			<input type="submit" value="Найти"> 
 		</div>
 	</div><!-- END gray_block -->
 	<button class="show_hide_filtr" type="button">Показать фильтр</button>
-
 	<!-- content -->
 	
 		<div class="content">
@@ -647,12 +647,8 @@
 	</div>
 	
 	<!-- content end -->
-	
-	
-	
-	
-	
-	
+
+
 	
 	<footer class="footer">
 		<div class="footer_1">
@@ -660,6 +656,7 @@
 				<row>
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 						<a href="/" class="logo">
+							<img src="img/footer_logo_mobile.png">
 							<span class="logo_text__top">Обрадовал<sup>.ру</sup> <br></span>
 							<span class="logo_text__bottom">Доставка цветов и подарков</span>
 							<span class="copy">© 2010-2014.</span>
@@ -904,6 +901,7 @@
 
 	
 <script src="libs/jquery/jquery-1.11.2.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="libs/jQueryFormStyler-master/jquery.formstyler.min.js"></script>
 <!-- datepicker -->
 <script src="libs/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
@@ -914,6 +912,11 @@
 <script src="js/common.js"></script>
 <script src="libs/jquery.pixlayout.0.9.7.js"></script>
 <script type="text/javascript">
+	$(function(){
+//		$.pixlayout({clip: true, src: "index_1440.jpg", show:true, center:true, top:0, left:0, pervious: false});
+}); 
+</script>
+<script type="text/javascript">
 	
 	$(function(){
 		 $('.city_tabs').on('click', 'a:not(.active)', function() {
@@ -923,6 +926,5 @@
   });
 }); 
 </script>
-
 </body>
 </html>

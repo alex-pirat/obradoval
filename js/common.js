@@ -22,21 +22,44 @@ $(function() {
         }
 	}).datepicker("setDate", new Date());
 	
-	// search
-	$('.js_search_button').on('click', function() {
-		$('.search_block').stop().slideToggle().toggleClass('show_search_block');
-	});
 	
-	$(document).mouseup(function (e) {
+    // search
+
+        
+        var searchBox = function() {
+       
+     $('.search_block').toggle("slide", function(){
+           // alert("The toggle() method is finished!");
+        }, {
+    "direction": "right",
+    "distance": "200px"
+        }, "1000");
+     $('.search_block').toggleClass('show_search_block');   
+	
+        }
+
+        $('.js_search_button').click(function() {
+            
+           searchBox()
+        });
+        
+        $(document).mouseup(function (e) {
+                
         var container = $(".search_block, .search_btn");
        
         if (!container.is(e.target) // if the target of the click isn't the container...
             && container.has(e.target).length === 0) // ... nor a descendant of the container
         {
-         $(".search_block").slideUp().removeClass('show_search_block');
+        if($('.search_block').hasClass('show_search_block')) {
+             searchBox()
+          }   
+
         }
     });
+     
 	
+        // search end
+        
 	// slick
 	$('.js_slick_slider').slick({
 		arrows: true,
@@ -82,11 +105,49 @@ $(function() {
 	
 	//#start сообщения внизу страницы
         
-        $('.message_send_block').each(function() {
-            var elem = $(this).attr('href');
-            var mh = $(this).outerHeight();
-            $(this).css({'bottom': '-'+mh+'px'} );
+        var mesBox = function() {
+             $('.message_send_block').each(function() {
+            $(this).css({'bottom': '-'+$(this).outerHeight()+'px'} );
+            
+            
+              if($(this).outerHeight() >= $(window).height()) {
+                $(this).addClass('scroll');
+                } else {
+                $(this).removeClass('scroll');  
+                }
    
+        })
+            
+        };
+        
+        var closeMesBox = function() {
+            
+                 $('.message_send_block').each(function() {
+            var mh = $(this).outerHeight();
+            $(this).animate({'bottom': '-'+mh+'px'} ,{
+                complete:function() {
+                $('.fixed_btn a').show()    
+                }
+            }, 300 );
+           
+   
+        })
+
+            
+        }
+        
+       mesBox(); 
+        
+        $(window).on('resize', function() {
+            
+             $('.message_send_block').each(function() {
+               if($(this).outerHeight() >= $(window).height()) {
+                $(this).addClass('scroll');
+                } else {
+                $(this).removeClass('scroll');  
+                }
+        }) 
+                   
         })
 	
 	$('.js_message').on('click',function(){
@@ -102,6 +163,7 @@ $(function() {
        		$('#subscribe_block').animate({bottom:'-'+sb+'px'} , 500);
                 }
 		$(elem).animate({bottom:'0'},500);
+                
 		return false;
 	});
 	
@@ -121,19 +183,16 @@ $(function() {
             && container.has(e.target).length === 0) // ... nor a descendant of the container
         {
             
-            $('.message_send_block').each(function() {
-            var mh = $(this).outerHeight();
-            $(this).animate({'bottom': '-'+mh+'px'} ,{
-                complete:function() {
-                $('.fixed_btn a').show()    
-                }
-            }, 300 );
+       closeMesBox()
            
-   
-        })
-           
-        }
-    });
+        } 
+    }); 
+    
+    $(document).keyup(function(e) {
+        if (e.keyCode == 27) { // escape key maps to keycode `27`
+       closeMesBox()  
+       }
+   });
     
     //end #########сообщения внизу страницы
 	

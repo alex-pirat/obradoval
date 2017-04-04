@@ -464,6 +464,10 @@
             top: -75px;
             left: 67px;
         }
+        
+         .additional-items.w640 {
+            padding-bottom:170px;
+        }
 
 
 
@@ -482,6 +486,17 @@
             text-align: center;
 
         }
+        
+        .slick-arrow {
+    top: 195px;
+    }
+        
+         .additional-items.w640 {
+            
+            padding-bottom:190px;
+            }
+        
+       
         .w480 {
             display: none !important;
 

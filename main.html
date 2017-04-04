@@ -17,7 +17,7 @@
 	<meta name="msapplication-navbutton-color" content="#000">
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
-	<link rel="stylesheet" href="libs/bootstrap-grid/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic" rel="stylesheet">	<link rel="stylesheet" href="libs/bootstrap-grid/bootstrap.min.css">
 	<link rel="stylesheet" href="libs/jQueryFormStyler-master/jquery.formstyler.css">
 	<link rel="stylesheet" href="libs/jquery-ui-1.11.4.custom/jquery-ui.min.css">
 	<link rel="stylesheet" href="libs/slick-1.6.0/slick/slick.css">
@@ -77,6 +77,7 @@
 	<!-- block_1 -->
 	<div class="block_1">
 		<a href="/" class="logo left">
+			<img class="mob" src="img/logo_mobile_2.png">
 			<span class="logo_text__top">Обрадовал<sup>.ру</sup> <br></span>
 			<span class="logo_text__bottom">Доставка цветов и подарков</span>
 		</a>
@@ -168,7 +169,7 @@
 								<ul id="tbt-1">
 									<li><a href="">С розами</a></li>
 									<li><a href="">С ирисами</a></li>
-									<li><a href="">Букеты невесты</a></li>
+									<li><a class="color_1" href="">Букеты невесты</a></li>
 									<li><a href="">С ромашками</a></li>
 									<li><a href="">С душистыми розами</a></li>
 									<li><a href="">С тюльпанами</a></li>
@@ -183,7 +184,7 @@
 									<li><a href="">С анемонами (маками)</a></li>
 									<li><a href="">С герберами</a></li>
 									<li><a href="">С нарцисами</a></li>
-									<li><a href="">С ранункулюсами</a></li>
+									<li><a class="color_2" href="">С ранункулюсами</a></li>
 									<li><a href="">Коллекция ИЛЬ ДЭ БОТЭ</a></li>
 									<li><a href="">С мимозой</a></li>
 								</ul>
@@ -194,7 +195,7 @@
 									<li><a href="">С розами</a></li>
 									<li><a href="">Подарочные корзины</a></li>
 									<li><a href="">С герберами</a></li>
-									<li><a href="">Сердца из цветов</a></li>
+									<li><a class="color_3" href="">Сердца из цветов</a></li>
 									<li><a href="">С ромашками</a></li>
 									<li><a href="">С французскими розами</a></li>
 									<li><a href="">С тюльпанами</a></li>
@@ -213,10 +214,10 @@
 								<ul id="tbt-3">
 									<li><a href="">Тюльпаны</a></li>
 									<li><a href="">Розы</a></li>
-									<li><a href="">Розы душистые</a></li>
+									<li><a class="color_4" href="">Розы душистые</a></li>
 									<li><a href="">Гиацинты</a></li>
 									<li><a href="">Ирисы</a></li>
-									<li><a href="">Пионы</a></li>
+									<li><a class="color_5" href="">Пионы</a></li>
 									<li><a href="">Каллы</a></li>
 								</ul>
 							</div>
@@ -312,7 +313,7 @@
 				</div>
 			</div><!-- END row -->
 		</div><!-- END container -->
-		<div class="search_block">
+		<div class="search_block ">
 			<input type="text" placeholder="Букет из роз">
 			<input type="submit" value="Найти"> 
 		</div>
@@ -398,7 +399,7 @@
 										<img class="products_item_img mobile_buket_640" src="img/mobile_buket_1.jpg" alt="">
 										<span class="products_item_count">23</span>
 										<div class="products_item_footer">
-											<span class="products_item_spec">спецпредложение</span>
+											<span class="products_item_pred orange_bg">спецпредложение</span>
 										</div>
 									</div>
 									<h6 class="h6">Корзина «Новогодняя» (алкоголь в подарок)</h6>
@@ -548,6 +549,7 @@
 					</div>
 					<div class="col-lg-10 col-md-12 col-sm-12">
 						<h5 class="georgia_title_5 hidden_1439">Как оплатить? Легко!</h5>
+						<div class="clearfix listok">
 						<div class="payment_item">
 							<span class="payment_name">Пластиковыми картами</span>
 							<ul class="payment_list">
@@ -590,7 +592,8 @@
 								<li><img src="img/nalich.jpg" alt=""></li>
 							</ul>
 						</div>
-						<a href="#" class="btn_1 hidden_1439">Все способы оплаты</a>
+					</div>
+						<div class="outbtn"><a href="#" class="btn_1 hidden_1439">Все способы оплаты</a></div>
 						<div class="enter_social show_640">
 							<span class="enter_social_descript">Войти используя соцвети:</span>
 							<span class="soc_btn">
@@ -619,10 +622,10 @@
 							<span class="reviews_data"><strong>Денис</strong>  <span class="reviews_date">04.01.2014</span></span>   
 						</div>
 						<ul class="reviews_products">
-							<li><img class="reviews_products_img" src="img/reviews_products.jpg" alt=""></li>
+							<li><a href="#"><img class="reviews_products_img" src="img/reviews_products.jpg" alt=""></a></li>
 							<li>
 								Отзыв написан к товару
-								<strong>Пионы розовые (от 9 шт.)</strong>
+								<strong><a href="#">Пионы розовые (от 9 шт.)</a></strong>
 							</li>
 						</ul>
 					</div>
@@ -633,10 +636,10 @@
 							<span class="reviews_data"><strong>Марат</strong>  <span class="reviews_date">01.01.2014</span></span>   
 						</div>
 						<ul class="reviews_products">
-							<li><img class="reviews_products_img" src="img/reviews_products_2.jpg" alt=""></li>
+							<li><a href="#"><img class="reviews_products_img" src="img/reviews_products_2.jpg" alt=""></a></li>
 							<li>
 								Отзыв написан к товару
-								<strong>Букет «Сюрприз»</strong>
+								<strong><a href="#">Букет «Сюрприз»</a></strong>
 							</li>
 						</ul>
 					</div>
@@ -646,24 +649,24 @@
 							<span class="reviews_data"><strong>Ирина</strong>  <span class="reviews_date">01.01.2014</span></span>   
 						</div>
 						<ul class="reviews_products">
-							<li><img class="reviews_products_img" src="img/reviews_products_3.jpg" alt=""></li>
+							<li><a href="#"><img class="reviews_products_img" src="img/reviews_products_3.jpg" alt=""></a></li>
 							<li>
 								Отзыв написан к товару
-								<strong>Корзина «Любимый подарок»</strong>
+								<strong><a href="#">Корзина «Любимый подарок»</a></strong>
 							</li>
 						</ul>
 					</div>
 					<div class="col-lg-3 visible-lg">
 						<div class="reviews_text">
-							Как всегда сервис на уровне! Спасибо! Чтобы я без вас делала, еще и скидку сделали. Спасибо.
+							Как всегда сервис на уровне! Спасибо! Чтобы я без вас делала, еще и скидку сделали. 
 							<span class="reviews_data"><strong>Марат</strong>  <span class="reviews_date">01.01.2014</span></span>   
 						</div>
 						<ul class="reviews_products">
-							<li><img class="reviews_products_img" src="img/reviews_products_4.jpg" alt=""></li>
+							<li><a href="#"><img class="reviews_products_img" src="img/reviews_products_4.jpg" alt=""></a></li>
 							<li>
 								Отзыв написан к товару
-								<strong>Корзинка продуктовая 
-								«С праздником»</strong>
+								<strong><a href="#">Корзинка продуктовая 
+										«С праздником»</a></strong>
 							</li>
 						</ul>
 					</div>
@@ -675,13 +678,15 @@
 							<a href="#" class="btn_1 btn_1_style_1">Написать отзыв</a>
 						</div>
 						<div class="col-lg-6 col-md-8">
-							<img src="img/services.jpg" alt="">
+							<div class="line">		
+							<img class="serv" src="img/services.jpg" alt="">
 							<div class="soc_btn">
 								<a class="vk" href=""></a>
 								<a class="fb" href=""></a>
 								<a class="google" href=""></a>
 								<a class="tw" href=""></a>
 								<a class="inst" href=""></a>
+							</div>
 							</div>
 						</div>
 					</div>
@@ -835,6 +840,7 @@
 				<row>
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 						<a href="/" class="logo">
+							<img src="img/footer_logo_mobile.png">
 							<span class="logo_text__top">Обрадовал<sup>.ру</sup> <br></span>
 							<span class="logo_text__bottom">Доставка цветов и подарков</span>
 							<span class="copy">© 2010-2014.</span>
@@ -1079,6 +1085,7 @@
 
 	
 <script src="libs/jquery/jquery-1.11.2.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="libs/jQueryFormStyler-master/jquery.formstyler.min.js"></script>
 <!-- datepicker -->
 <script src="libs/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
