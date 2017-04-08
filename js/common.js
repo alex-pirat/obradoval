@@ -66,6 +66,7 @@ $(function() {
 		dots: false,
 		slidesToShow: 4,
   		slidesToScroll: 4,
+                adaptiveHeight: true,
 		responsive: [
 			{
 				breakpoint: 1439,
@@ -162,7 +163,7 @@ $(function() {
                 if(elem == '#message_send_block') {
        		$('#subscribe_block').animate({bottom:'-'+sb+'px'} , 500);
                 }
-		$(elem).animate({bottom:'0'},500);
+		$(elem).show().animate({bottom:'0'},500);
                 
 		return false;
 	});
@@ -252,6 +253,12 @@ $(function() {
             container.slideUp();
         }
     });
+    
+       $(document).keyup(function(e) {
+        if (e.keyCode == 27) { // escape key maps to keycode `27`
+        $(".auth_reg_block").slideUp();
+       }
+   });
     /****end**** */
 
 	

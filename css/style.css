@@ -1859,7 +1859,8 @@ reviews_footer .line:after {
 	background: #fff;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 	bottom: -600px;
-	display: block;
+        /*block was*/
+	display: none;
 	left: calc(50% - 832px/2);
 	padding: 30px 29px 34px 29px;
 	position: fixed;
@@ -3089,6 +3090,8 @@ reviews_footer .line:after {
 		width: 100%;
 	}
 	.products_price strong {
+                
+                padding-bottom:8px;
 		font-size: 48px;
 	}
 	.georgia_title_5 {
