@@ -21,13 +21,14 @@
 	<link rel="stylesheet" href="libs/jQueryFormStyler-master/jquery.formstyler.css">
 	<link rel="stylesheet" href="libs/jquery-ui-1.11.4.custom/jquery-ui.min.css">
 	<link rel="stylesheet" href="libs/slick-1.6.0/slick/slick.css">
+	<link rel="stylesheet" href="css/basket-right.css">
 	<link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-city.css">
 
 </head>
 <body>
 <!-- wrapper -->
-<div class="wrapper">
+<div class="wrapper item_wrapper">
 	<nav class="top_menu">
 		<nav class="buter_btn js_buter">
 			<span></span>
@@ -61,8 +62,8 @@
 			<li><a href="">Корпоративным клиентам</a></li>
 		</ul>
 		<ul class="phone_number">
-			<li><span class="hide_mobile">+7 (495)</span> <span>669-77-99</span></li>
-			<li><span>8-800-333-53-31</span></li>
+			<li><span class="show_mobile"><a href="tel:+74956697799">669-77-99</a></span> <span class="showdesc"><a href="tel:+74956697799">+7 (495) 669-77-99</a></span></li>
+			<li><span class="cityph"><a href="tel:88003335331">8-800-333-53-31</a></span></li>
 			<li><button type="button" class="btn_transparent">Звонок on-line</button></li>
 		</ul>
 	</nav>
@@ -77,8 +78,8 @@
 		</li>
 	</ul>
 	<!-- block_1 -->
-	<div class="block_1">
-		<a href="/" class="logo left">
+	<div class="block_1 city_block_1">
+		<a href="/" class="logo left catalog_bs_link city_logo_item">
 			<img class="mob" src="img/logo_mobile_2.png">
 			<span class="logo_text__top">Обрадовал<sup>.ру</sup> <br></span>
 			<span class="logo_text__bottom">Доставка цветов и подарков</span>
@@ -162,7 +163,7 @@
 			</li>-->
 			<li data-tab="tab-1">
 				<a href="">Цветы</a>
-				<ul id="tab-1" class="tab-content" >
+				<ul id="tab-1" class="tab-content item_tab-content" >
 					<li>
 						<!-- mega_menu__link -->
 						<div class="mega_menu__link width_1">
@@ -256,7 +257,7 @@
 			</li>
 		</ul>
 		</div>
-		<a href="#" class="right link_1">Войти</a>
+		<a href="#" class="right link_1 catalog_bs_link item_bs_link">Войти</a>
 	</div><!-- END block_1 -->
 	<!-- gray_block -->
 	<div class="gray_block">
@@ -344,7 +345,7 @@
 						<div class="city_item_img">
 							<img src="img/flags/t_rus.jpg" alt="">
 						</div>
-						<h3 class="city_item_title">Россия_1</h3>
+						<h3 class="city_item_title">Россия</h3>
 						<ul class="city_item_list">
 							<li><a href="#">Екатеринбург</a></li>
 							<li><a href="#">Москва</a></li>
@@ -358,7 +359,7 @@
 						<div class="city_item_img">
 							<img src="img/flags/t_abkh.jpg" alt="">
 						</div>
-						<h3 class="city_item_title">Абхазия_1</h3>
+						<h3 class="city_item_title">Абхазия</h3>
 						<ul class="city_item_list">
 							<li><a href="#">Гагра</a></li>
 						</ul>
@@ -367,7 +368,7 @@
 						<div class="city_item_img">
 							<img src="img/flags/t_armen.jpg" alt="">
 						</div>
-						<h3 class="city_item_title">Армения_1</h3>
+						<h3 class="city_item_title">Армения</h3>
 						<ul class="city_item_list">
 							<li><a href="#">Абовян</a></li>
 							<li><a href="#">Авшар</a></li>
@@ -382,7 +383,7 @@
 						<div class="city_item_img">
 							<img src="img/flags/t_byelor.jpg" alt="">
 						</div>
-						<h3 class="city_item_title">Беларусь_1</h3>
+						<h3 class="city_item_title">Беларусь</h3>
 						<ul class="city_item_list">
 							<li><a href="#">Брест</a></li>
 							<li><a href="#">Гродно</a></li>
@@ -394,7 +395,7 @@
 						<div class="city_item_img">
 							<img src="img/flags/t_georg.jpg" alt="">
 						</div>
-						<h3 class="city_item_title">Грузия_1</h3>
+						<h3 class="city_item_title">Грузия</h3>
 						<ul class="city_item_list">
 							<li><a href="#">Тбилиси</a></li>
 						</ul>
@@ -403,7 +404,7 @@
 						<div class="city_item_img">
 							<img src="img/flags/t_kazak.jpg" alt="">
 						</div>
-						<h3 class="city_item_title">Казахстан_1</h3>
+						<h3 class="city_item_title">Казахстан</h3>
 						<ul class="city_item_list">
 							<li><a href="#">Алматы</a></li>
 							<li><a href="#">Астана</a></li>
@@ -419,7 +420,7 @@
 						<div class="city_item_img">
 							<img src="img/flags/t_eston.jpg" alt="">
 						</div>
-						<h3 class="city_item_title">Эстония_1</h3>
+						<h3 class="city_item_title">Эстония</h3>
 						<ul class="city_item_list">
 							<li><a href="#">Кеила</a></li>
 							<li><a href="#">Кохтла</a></li>
@@ -438,7 +439,7 @@
 						<div class="city_item_img">
 							<img src="img/flags/t_tajik.jpg" alt="">
 						</div>
-						<h3 class="city_item_title">Таджикистан_1</h3>
+						<h3 class="city_item_title">Таджикистан</h3>
 						<ul class="city_item_list">
 							<li><a href="#">Душанбе</a></li>
 						</ul>
@@ -447,7 +448,7 @@
 						<div class="city_item_img">
 							<img src="img/flags/t_turkm.jpg" alt="">
 						</div>
-						<h3 class="city_item_title">Туркменистан_1</h3>
+						<h3 class="city_item_title">Туркменистан</h3>
 						<ul class="city_item_list">
 							<li><a href="#">Ашхабат</a></li>
 							<li><a href="#">Туркменистан</a></li>
@@ -648,8 +649,47 @@
 	
 	<!-- content end -->
 
-
-	
+	<div class="backout">
+	<div class="basket city_basket">
+		<a id="link_basket_tmd" class="link_basket_tmd" data-showdiv="basket_tmd
+			" href="#" >
+			<div class="basket_price catalog2_basket_price city_basket_price">
+				<img class="price" src="img/basket-right/bs_basket.png" alt="">
+				<p>325 000 <span>руб.</span></p>
+			</div>
+		</a>
+		<div id="basket_tmd" class="catalog_basket_tmd city_basket_tmd">
+			<div class="basket_top basket_bss">
+				<img class="basket_img" src="img/basket-right/bs_item_top_640.jpg" alt="">
+				<h6>Шоколадки Квадратики<br>3 набора.</h6>
+				<p>1 x 400 <span>руб.</span></p>
+				<div class="basket_bss_cross">
+					<a href="#"><img src="img/basket-right/bs_cross.png" alt=""></a>
+				</div>
+			</div>
+			<div class="basket_middle basket_bss">
+				<img class="basket_img" src="img/basket-right/bs_item_middle_640.jpg" alt="">
+				<h6>Букет гиацинтов</h6>
+				<p>2 x 1500 <span>руб.</span></p>
+				<div class="basket_bss_cross">
+					<a href="#"><img src="img/basket-right/bs_cross.png" alt=""></a>
+				</div>
+			</div>
+			<div class="basket_down basket_bss">
+				<img class="basket_img" src="img/basket-right/bs_item_down_640.jpg" alt="">
+				<h6>Букет с пионами <br>«Цветочное ассорти»</h6>
+				<p>2 x 1500 <span>руб.</span></p>
+				<div class="basket_bss_cross active">
+					<a href="#"><img src="img/basket-right/bs_cross.png" alt=""></a>
+				</div>
+			</div>
+			<div class="basket_btn">
+				<p>Итого: <span>325 000</span> <span class="italic">руб</span></p>
+				<button>Оформить заказ <img src="img/basket-right/bs_arrow_right.png" alt=""></button>
+			</div>
+		</div>
+	</div>
+	</div>
 	<footer class="footer">
 		<div class="footer_1">
 			<div class="container">

@@ -1,5 +1,29 @@
 $(function() {
     
+      
+     
+     
+    
+    
+    $(".radio_number input[type='radio']").click(function()
+{
+  var previousValue = $(this).attr('previousValue');
+  var name = $(this).attr('name');
+
+  if (previousValue == 'checked')
+  {
+    $(this).removeAttr('checked');
+    $(this).attr('previousValue', false);
+  }
+  else
+  {
+    $(".radio_number  input[name="+name+"]:radio").attr('previousValue', false);
+    $(this).attr('previousValue', 'checked');
+  }
+    });
+
+
+    
 
 	// styler
 	$('select').styler();
@@ -237,7 +261,7 @@ $(function() {
          $('.link_1').on('click',function() {
               $('.auth_reg_block').slideDown();
               var h_block_2 = $('.auth_reg_block').innerHeight();
-              console.log(h_block_2);
+             // console.log(h_block_2);
           })
           
           $('.auth_reg_block .btn_1.show_640').on('click',function() {
@@ -274,7 +298,7 @@ $(function() {
         $('.gray_select_style.width_4 .jq-selectbox__select-text').text('Цвет')
         $('.gray_select_style.width_4 ul li').each(function(i) {
 		$(this).attr('class', 'inc_' + i )    
-         	console.log(i)
+         	//console.log(i)
 		});   
        
        
@@ -331,7 +355,7 @@ $(function() {
         
         
         var tzC =  function() {
-            if($('.menu_mobile_phone').css('z-index') == '1') {
+            if($('.menu_mobile_phone').css('z-index') == '299') {
             $('.phone_number').click(function() {
                 
              // $('.menu_mobile_phone').toggleClass('vibible');
@@ -373,7 +397,40 @@ $(function() {
      // mask
     $('.for_mask').mask('+7 (000) 000-00-00');
          
-        
+     
+    
+    $(".link_personal").on('click',function(){
+  $(this).next(".personal_menu").slideToggle();
+  $('#basket_tmd').slideUp();
+  return false;
+});
+$(".link_basket_tmd").click(function(){   
+  $(this).next("#basket_tmd").slideToggle();
+  $('.personal_menu').slideUp();
+   return false;
+});
+
+jQuery(function($){
+  $(document).mouseup(function (e){ // событие клика по веб-документу
+    var box = $(".personal_menu, .basket_name"); // тут указываем ID элемента
+    if (!box.is(e.target) // если клик был не по нашему блоку
+        && box.has(e.target).length === 0) { // и не по его дочерним элементам
+      $(".personal_menu").slideUp(); // скрываем его
+
+    }
+  });
+})
+
+jQuery(function($){
+  $(document).mouseup(function (e){ // событие клика по веб-документу
+    var box = $("#basket_tmd, .link_basket_tmd"); // тут указываем ID элемента
+    if (!box.is(e.target) // если клик был не по нашему блоку
+        && box.has(e.target).length === 0) { // и не по его дочерним элементам
+      $("#basket_tmd").slideUp(); // скрываем его
+
+    }
+  });
+})
         
  
 
@@ -381,3 +438,8 @@ $(function() {
                
 
 });
+
+
+
+
+

@@ -20,7 +20,7 @@
 .city_tabs_button {
 	display: inline-block;
 	color: #009900;
-	font: 13px "OpenSans", Arial, sans-serif;
+        font-size:13px;
 	border: 1px solid  #009900;
 	padding: 8px 10px;
 }
@@ -63,16 +63,19 @@
 }
 
 .city_item_title {
-	font: 700 16px "OpenSans", Arial, sans-serif;
+        font-weight: 700;
+        font-size:16px;
 	color: #000;
 	margin: 24px 0;
 }
 
 .city_item_list > li > a {
-	font: 13px "OpenSans", Arial, sans-serif;
+	font-size: 13px;
 	color: #009900;
 }
-
+.city_item_list > li > a:hover {
+    text-decoration: underline;
+}
 .city_item_list > li + li {
 	margin-top: 8px;
 }
@@ -82,27 +85,81 @@
 }
 
 .content_text_title {
-	font: 18px "OpenSans", Arial, sans-serif;
+        font-weight: normal;
+        font-family: Georgia;
+	font-size:18px;
 	margin-bottom: 25px;
 }
 
 .content_text p {
-	font: 13px "OpenSans", Arial, sans-serif;
+	font-size:13px;
 	line-height: 18px;
 }
 
 .content_text p + p {
 	margin-top: 22px;
-}  
+} 
+.link_1 {
+	margin-right: 210px;
+} 
+.basket {
+	width: 188px;
+}
+.basket_price {
+	height: 92px;
+	width: 188px;
+}
+.city_basket .price {
+	margin-top: 28px;
 
+}
+.basket .catalog_basket_tmd {
+	z-index: 999;
+}
+.city_basket_tmd .basket_bss {
+	right: 115px;
+}
+.city_basket_tmd .basket_btn {
+	right: 115px;
+	position: relative;
+}
 @media(max-width: 998px) {
 	.city_item {
 		margin-bottom: 50px;
 		width: 33.33333%;
 	}
 }
-
+@media only screen and (max-width: 991px) {
+	.wrapper .block_1 .logo {
+		margin-right: 25px;
+	}
+}
+@media only screen and (max-width: 950px) {
+	.basket_price {
+		height: 87px;
+	}
+}
+@media only screen and (max-width: 755px) {
+	.city_basket .city_basket_price {
+/*		z-index: 0;*/
+	}
+	.basket {
+/*		z-index: 0;*/
+	}
+	.city_block_1 {
+/*		z-index: 0;*/
+	}
+}
 @media(max-width: 640px) {
+	.city_basket_tmd .basket_bss {
+		right: 115px !important;
+	}
+	.city_basket_tmd .basket_btn {
+		right: 115px !important;
+	}
+	.item_bs_link {
+		display: none;
+	}
 	.city_item_title { font-size: 32px; }
 	.city_item_list > li > a {
 		font-size: 28px;
@@ -118,9 +175,41 @@
 		margin-bottom: 50px;
 		width: 50%;
 	}
+	.city_basket .basket_price img {
+		float: left;
+		margin-top: 29px;
+	}
+	.city_basket .basket_price p {
+		margin-top: 36px;
+		font-size: 17px;
+	}
+	.city_basket_tmd {
+		
+	}
 }
 
 @media(max-width: 580px) {
+	.city_basket .city_basket_tmd .basket_bss {
+		width: 279px;
+	}
+	.city_basket .city_basket_tmd .basket_bss h6 {
+		font-size: 14px;
+		margin-top: 2px;
+		width: 96px;
+	}
+	.city_basket .city_basket_tmd .basket_bss p {
+		margin-top: 1px;
+	}
+	.city_basket .city_basket_tmd .basket_btn {
+		width: 279px;
+	}
+	.city_basket .basket_price img {
+		margin-left: 10px;
+	}
+	.city_basket {width: 164px;}
+	.city_basket .basket_price {
+		width: 164px;
+	}
 	.city_item_title { font-size: 28px; }
 	.city_item_list > li > a {
 		font-size: 24px;
@@ -137,8 +226,59 @@
 	.select_city { font-size: 18px; }
 	
 } 
-
+@media only screen and (max-width: 388px) {
+	.city_basket {
+		width: 150px;
+	}
+	.city_basket .basket_price {
+		height: 80px;
+		width: 150px;
+	}
+	.basket_price .price {
+		float: left;
+		margin-left: 10px;
+		margin-right: 5px;
+		margin-top: 25px;
+	}
+	.basket_price p {
+		margin-top: 35px;
+		font-size: 18px;
+	}
+}
+@media only screen and (max-width: 380px) {
+	.city_basket {
+		width: 140px;
+	}
+	.city_basket .city_basket_price .price {
+		height: 27px;
+		width: 27px;
+		margin-left: 6px;
+	}
+	.city_basket .basket_price {
+		height: 80px;
+		width: 140px;
+	}
+	.city_basket .city_basket_tmd .basket_bss {
+		width: 255px;
+	}
+	.city_basket .city_basket_tmd .basket_btn {
+		width: 255px;
+	}
+	.city_basket .city_basket_tmd .basket_btn button {
+		font-size: 17px;
+	}
+}
 @media(max-width: 360px) {
+	.city_logo_item img {
+		width: 90% !important;
+	}
+	.city_basket {
+		width: 130px;
+	}
+	.city_basket .basket_price {
+		height: 80px;
+		width: 130px;
+	}
 	.city_item {
 		width: 100%;
 	}
@@ -146,5 +286,11 @@
 	.city_item_title { font-size: 28px; }
 	.city_item_list > li > a {
 		font-size: 22px;
+	}
+	.city_basket .city_basket_tmd .basket_bss {
+		width: 245px;
+	}
+	.city_basket .city_basket_tmd .basket_btn {
+		width: 245px;
 	}
 }
