@@ -158,7 +158,12 @@
 		right: 115px !important;
 	}
 	.item_bs_link {
-		display: none;
+    position: absolute;
+    right: 0px;
+    margin-right: 200px;
+    margin-top: 14px;
+    top: 0px;
+    font-size:20px;
 	}
 	.city_item_title { font-size: 32px; }
 	.city_item_list > li > a {
@@ -189,6 +194,11 @@
 }
 
 @media(max-width: 580px) {
+    .item_bs_link {
+
+    margin-right: 174px;
+    
+	}
 	.city_basket .city_basket_tmd .basket_bss {
 		width: 279px;
 	}

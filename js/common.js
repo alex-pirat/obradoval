@@ -1,5 +1,118 @@
 $(function() {
     
+    var wh = $(window).outerHeight();
+   
+   
+    $(window).scroll(function(){
+   var st = $(this).scrollTop();     
+   var top_menu = $('.top_menu'),
+   wrap_top_menu = $('.wrap_top_menu'),
+   block_1 = $('.block_1'),
+   wrap_block_1 = $('.wrap_block_1'),
+   auth_reg_block = $('.auth_reg_block'),
+   backout = $('.backout'),
+   gray_block = $('.gray_block'),
+   wrap_gray_block = $('.wrap_gray_block'),
+   menu_mobile_phone = $('.menu_mobile_phone'),
+   wrapper_full = $('.wrapper.full');
+   
+   var scroll = $(window).scrollTop();
+
+
+  
+  /* block_1 start*/
+    if (scroll >= top_menu.outerHeight()) {
+      top_menu.addClass('fixed');
+      wrap_block_1.addClass('fixed');
+      auth_reg_block.addClass('fixed');
+      backout.addClass('fixed');
+      wrap_gray_block.addClass('fixed');
+     // wrapper_full.css('padding-top', wrapper_full.outerHeight() + block_1.outerHeight() + gray_block.outerHeight()  + 'px');
+      wrapper_full.addClass('step_1');
+  }
+  else {
+      top_menu.removeClass('fixed');
+      wrap_block_1.removeClass('fixed');
+      auth_reg_block.removeClass('fixed'); 
+      backout.removeClass('fixed'); 
+      wrap_gray_block.removeClass('fixed');
+     // wrapper_full.css('padding-top', 0 + 'px' );
+      wrapper_full.removeClass('step_1');
+  }
+   /* block_1 end */
+  
+  
+});
+  
+  
+ 
+  
+
+equalheight = function(container){
+
+var currentTallest = 0,
+     currentRowStart = 0,
+     rowDivs = new Array(),
+     $el,
+     topPosition = 0;
+ $(container).each(function() {
+
+   $el = $(this);
+   $($el).height('auto')
+   topPostion = $el.position().top;
+
+   if (currentRowStart != topPostion) {
+     for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+       rowDivs[currentDiv].height(currentTallest);
+     }
+     rowDivs.length = 0; // empty the array
+     currentRowStart = topPostion;
+     currentTallest = $el.height();
+     rowDivs.push($el);
+   } else {
+     rowDivs.push($el);
+     currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+  }
+   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+     rowDivs[currentDiv].height(currentTallest);
+   }
+ });
+}
+
+$(window).load(function() {
+    $('.mega_menu > li > ul .width_1').css('height',$(window).outerHeight() - 100 + 'px');
+
+  if($(window).outerWidth() >= 950 && $(window).outerHeight() <=600 ) {
+     $('.mega_menu > li > ul .width_1').css('height',$(window).outerHeight() - 100 + 'px');
+  }
+  
+  if($(window).outerWidth() >= 950 && $(window).outerHeight() >=600 ) {
+      $('.mega_menu > li > ul .width_1').css('height','auto'); 
+  }
+  
+    
+  
+});
+
+
+$(window).resize(function(){
+      $('.mega_menu > li > ul .width_1').css('height',$(window).outerHeight() - 100 + 'px');
+
+     if($(window).outerWidth() >= 950 && $(window).outerHeight() <=600 ) {
+     $('.mega_menu > li > ul .width_1').css('height',$(window).outerHeight() - 100 + 'px');
+  }
+  
+  if($(window).outerWidth() >= 950 && $(window).outerHeight() >=600 ) {
+      $('.mega_menu > li > ul .width_1').css('height','auto'); 
+  }
+  
+});
+
+  
+  /**/
+
+
+    
       
      
      
@@ -50,21 +163,30 @@ $(function() {
     // search
 
         
-        var searchBox = function() {
+        var searchBox = function(direction) {
        
-     $('.search_block').toggle("slide", function(){
-           // alert("The toggle() method is finished!");
-        }, {
-    "direction": "right",
-    "distance": "200px"
-        }, "1000");
-     $('.search_block').toggleClass('show_search_block');   
+       // Set the effect type
+    var effect = 'slide';
+
+    // Set the options for the effect type chosen
+    var options = { direction: direction };
+
+    // Set the duration (default: 400 milliseconds)
+    var duration = 400;
+
+    $('.search_block').toggle(effect, options, duration);
+    $('.search_block').toggleClass('show_search_block');
 	
         }
 
         $('.js_search_button').click(function() {
             
-           searchBox()
+  
+            
+         
+           if(!$('.search_block').hasClass('show_search_block')) {
+               searchBox('right')
+          }   
         });
         
         $(document).mouseup(function (e) {
@@ -75,7 +197,7 @@ $(function() {
             && container.has(e.target).length === 0) // ... nor a descendant of the container
         {
         if($('.search_block').hasClass('show_search_block')) {
-             searchBox()
+             searchBox('left')
           }   
 
         }
@@ -89,21 +211,22 @@ $(function() {
 		arrows: true,
 		dots: false,
 		slidesToShow: 4,
-  		slidesToScroll: 4,
+  		slidesToScroll: 1,
                 adaptiveHeight: true,
+                
 		responsive: [
 			{
 				breakpoint: 1439,
 				settings: {
 					slidesToShow: 3,
-					slidesToScroll: 3
+					slidesToScroll: 1
 				}
 			},
 			{
 				breakpoint: 992,
 				settings: {
 					slidesToShow: 2,
-					slidesToScroll: 2
+					slidesToScroll: 1
 				}
 			},
 			{
@@ -127,6 +250,25 @@ $(function() {
 			}
 		]
 	});
+        
+     	$('.mp_items_out.one .double_prev').click(function(){
+    $('.mp_items_out.one .js_slick_slider').slick('slickPrev');
+	return false;
+	});
+	$('.mp_items_out.one .double_next').click(function(){
+    $('.mp_items_out.one .js_slick_slider').slick('slickNext');
+	return false;
+	});
+        
+        $('.mp_items_out.two .double_prev').click(function(){
+    $('.mp_items_out.two .js_slick_slider').slick('slickPrev');
+	return false;
+	});
+	$('.mp_items_out.two .double_next').click(function(){
+    $('.mp_items_out.two .js_slick_slider').slick('slickNext');
+	return false;
+	});
+        
 	
 	//#start сообщения внизу страницы
         
@@ -261,7 +403,7 @@ $(function() {
          $('.link_1').on('click',function() {
               $('.auth_reg_block').slideDown();
               var h_block_2 = $('.auth_reg_block').innerHeight();
-             // console.log(h_block_2);
+             return false;
           })
           
           $('.auth_reg_block .btn_1.show_640').on('click',function() {

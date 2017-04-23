@@ -24,8 +24,9 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!-- wrapper -->
-<div class="wrapper">
+	
+	<div class="wrapper full">
+	<div class="wrap_top_menu">
 	<nav class="top_menu">
 		<nav class="buter_btn js_buter">
 			<span></span>
@@ -59,11 +60,13 @@
 			<li><a href="">Корпоративным клиентам</a></li>
 		</ul>
 		<ul class="phone_number">
-			<li><span class="show_mobile"><a href="tel:+74956697799">669-77-99</a></span> <span class="showdesc"><a href="tel:+74956697799">+7 (495) 669-77-99</a></span></li>
+			<li><span class="show_mobile"><a href="tel:+74956697799">669-77-99</a></span> <span class="showdesc"><a href="tel:+74956697799">+7 (495) <em>669-77-99</em></a></span></li>
 			<li><span class="cityph"><a href="tel:88003335331">8-800-333-53-31</a></span></li>
-			<li><button type="button" class="btn_transparent">Звонок on-line</button></li>
+<!--			<li><button type="button" class="btn_transparent">Звонок on-line</button></li>-->
 		</ul>
 	</nav>
+	</div>
+	
 	<ul class="menu_mobile_phone">
 		<li><a href="tel:+74956697799">+7 (495) 669-77-99</a></li>
 		<li class="free">
@@ -74,6 +77,8 @@
 			<button type="button" class="blue_btn">Звонок on-line</button>
 		</li>
 	</ul>
+	   
+	<div class="wrap_block_1">
 	<!-- block_1 -->
 	<div class="block_1">
 		<a href="/" class="logo left">
@@ -165,7 +170,7 @@
 						<!-- mega_menu__link -->
 						<div class="mega_menu__link width_1">
 							<div class="mega_menu__column">
-								<h3 data-tbt="tbt-1" class="h3">Букеты</h3>
+								<h3 data-tbt="tbt-1" class="h3"><a href="#">Букеты</a></h3>
 								<ul id="tbt-1">
 									<li><a href="">С розами</a></li>
 									<li><a href="">С ирисами</a></li>
@@ -190,7 +195,7 @@
 								</ul>
 							</div>
 							<div class="mega_menu__column">
-								<h3 data-tbt="tbt-2" class="h3">Свертки</h3>
+								<h3 data-tbt="tbt-2" class="h3"><a href="#">Свертки</a></h3>
 								<ul id="tbt-2">
 									<li><a href="">С розами</a></li>
 									<li><a href="">Подарочные корзины</a></li>
@@ -210,7 +215,7 @@
 								</ul>
 							</div>
 							<div class="mega_menu__column">
-								<h3 data-tbt="tbt-3" class="h3">Цветы</h3>
+								<h3 data-tbt="tbt-3" class="h3"><a href="#">Цветы</a></h3>
 								<ul id="tbt-3">
 									<li><a href="">Тюльпаны</a></li>
 									<li><a href="">Розы</a></li>
@@ -222,7 +227,7 @@
 								</ul>
 							</div>
 							<div class="mega_menu__column">
-								<h3 data-tbt="tbt-4" class="h3">Сухоцветы</h3>
+								<h3 data-tbt="tbt-4" class="h3"><a href="#">Сухоцветы</a></h3>
 								<ul id="tbt-4">
 									<li><a href="">Букеты</a></li>
 									<li><a href="">Композиции</a></li>
@@ -256,6 +261,9 @@
 		</div>
 		<a href="#" class="right link_1">Войти</a>
 	</div><!-- END block_1 -->
+	</div>
+	
+	<div class="wrap_gray_block">
 	<!-- gray_block -->
 	<div class="gray_block">
 		<!-- container -->
@@ -274,12 +282,14 @@
 					<div class="left">
 						<select class="gray_select_style width_2" data-placeholder="Кому">
 							<option></option>
+							<option value="">Все</option>
 							<option value="">Маме</option>
 							<option value="">Любимой</option>
 							<option value="">Начальнику</option>
 						</select>
 						<select class="gray_select_style width_3" data-placeholder="Повод">
 							<option value=""></option>
+							<option value="">Все поводы</option>
 							<option value="">Маме</option>
 							<option value="">Любимой</option>
 							<option value="">Начальнику</option>
@@ -303,7 +313,7 @@
 					</div>
 					<label class="label_datepicker">
 						Доставка
-						<input type="text" placeholder="" id="datepicker" class="datepicker">	
+						<input type="text" placeholder="" id="datepicker" readonly class="datepicker">	
 					</label>
 					<button type="button" class="search_btn right js_search_button">Поиcк</button>
 					<label class="mobile_search">
@@ -318,6 +328,16 @@
 			<input type="submit" value="Найти"> 
 		</div>
 	</div><!-- END gray_block -->
+	</div>
+	</div>	
+	<!-- wrapper full end -->
+	
+<!-- wrapper -->
+<div class="wrapper">
+
+
+	
+	
 	<button class="show_hide_filtr" type="button">Показать фильтр</button>
 	<div class="block_b">
 		<img class="date_ico" src="img/date_ico.png" alt="">
@@ -335,13 +355,17 @@
 				<!-- col -->
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<!-- slick_slider -->
-					<div class="slick_slider js_slick_slider">
+					<div class="mp_items_out two">
+					<div class="double_prev"></div>
+					<div class="double_next"></div>
+					<div class="slick_slider mp_items js_slick_slider">
 						<div>
 							<div class="wrap_products_item left">
 								<a href="#" class="wrap_products_link">
 									<div class="products_item">
 										<img class="products_item_img" src="img/buket_1.jpg" alt="">
 										<img class="products_item_img mobile_buket_640" src="img/mobile_buket_1.jpg" alt="">
+										<img class="products_item_img zoom_buket_lg" src="img/mobile_buket_1.jpg" alt="">
 										<span class="products_item_count">99</span>
 										<div class="products_item_footer">
 											<span class="products_item_status">Новинка</span>
@@ -358,6 +382,7 @@
 									<div class="products_item">
 										<img class="products_item_img" src="img/buket_2.jpg" alt="">
 										<img class="products_item_img mobile_buket_640" src="img/mobile_buket_2.jpg" alt="">
+										<img class="products_item_img zoom_buket_lg" src="img/mobile_buket_2.jpg" alt="">
 										<div class="products_item_header">
 											<strong>Бесплатная доставка</strong> на завтра 10.12.2014
 										</div>
@@ -381,6 +406,7 @@
 									<div class="products_item">
 										<img class="products_item_img" src="img/buket_3.jpg" alt="">
 										<img class="products_item_img mobile_buket_640" src="img/mobile_buket_3.jpg" alt="">
+										<img class="products_item_img zoom_buket_lg" src="img/mobile_buket_3.jpg" alt="">
 										<span class="products_item_count">23</span>
 										<div class="products_item_footer">
 											<span class="products_item_status">Новинка</span>
@@ -424,6 +450,7 @@
 							</div>
 						</div>
 					</div><!-- END slick_slider -->
+					</div>
 				</div><!-- END col -->
 			</div>
 			<div class="block_2">
@@ -464,7 +491,10 @@
 				<!-- col -->
 				<div class="col-lg-12">
 					<!-- slick_slider -->
-					<div class="slick_slider js_slick_slider">
+					<div class="mp_items_out one">
+					<div class="double_prev"></div>
+					<div class="double_next"></div>
+					<div class="slick_slider mp_items js_slick_slider">
 						<div>
 							<div class="wrap_products_item left">
 								<a href="#" class="wrap_products_link">
@@ -487,6 +517,7 @@
 									<div class="products_item">
 										<img class="products_item_img" src="img/buket_6.jpg" alt="">
 										<img class="products_item_img mobile_buket_640" src="img/mobile_buket_2.jpg" alt="">
+										<img class="products_item_img zoom_buket_lg" src="img/mobile_buket_1.jpg" alt="">
 									</div>
 									<h6 class="h6">Тюльпан Orange Princess (от 21 шт.)</h6>
 									<span class="products_price"><span class="products_price_old"> 3400 </span><strong>3000</strong> <i>руб</i></span>
@@ -534,6 +565,7 @@
 							</div>
 						</div>
 					</div><!-- END slick_slider -->
+					</div>
 				</div><!-- END col -->
 				<button type="button" class="show_640 green_mobile">Показать весь каталог</button>
 			</div>
@@ -1032,12 +1064,12 @@
 		<h2 class="georgia_title_3">Отправить сообщение</h2>
 		<p class="mess_style_1">Пожалуйста, задайте нам вопрос в форме ниже, не забудьте указать Ваше имя и контактную информацию для связи.</p>
 		<form action="#" method="post">
-			<label class="label_1">Ваше имя:<input type="text" placeholder="Владимир"></label>
-			<label class="label_1">e-mail:<input type="email" placeholder="vovan@mail.com"></label>
-			<label class="label_1">Тел. для связи:<input class="for_mask" type="text" placeholder="+79788992273"></label>
-			<label class="label_theme">Тема:<input type="text" placeholder="Не могу оформить заказ"></label>
+			<label class="label_1">Ваше имя:<input type="text" placeholder=""></label>
+			<label class="label_1">e-mail:<input type="email" placeholder=""></label>
+			<label class="label_1">Тел. для связи:<input class="for_mask" type="text" placeholder=""></label>
+			<label class="label_theme">Тема:<input type="text" placeholder=""></label>
 			<div class="wrap_textarea">
-				<label for="mess_text">Сообщение:</label><textarea id="mess_text" name="" class="mess_text" placeholder="Не получается оформить заказ, кнопка “Добавить в корзину” не работает. Подскажите в чем может быть проблема"></textarea>
+				<label for="mess_text">Сообщение:</label><textarea id="mess_text" name="" class="mess_text" placeholder=""></textarea>
 			</div>
 			<input class="mess_submit right" type="submit" value="Отправить">
 		</form>
@@ -1047,7 +1079,7 @@
 		<h2 class="georgia_title_3">Подписаться на рассылку</h2>
 		<p class="mess_style_1">Новинки, акции, мастер классы и еще много всего интересного.</p>
 		<form action="#" method="post">
-			<label class="label_1">Ваше e-mail:<input type="email" placeholder="vovan@mail.com"></label>
+			<label class="label_1">Ваше e-mail:<input type="email" placeholder=""></label>
 			<input class="mess_submit left" type="submit" value="Отправить">
 		</form>
 	</div>
@@ -1100,6 +1132,7 @@
 //		$.pixlayout({clip: true, src: "index_1440.jpg", show:true, center:true, top:0, left:0, pervious: false});
 }); 
 </script>
+
 
 </body>
 </html>

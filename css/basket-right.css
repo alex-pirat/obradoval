@@ -25,6 +25,9 @@ p {
   right: 0;
   width: 301px;
 }
+.backout.fixed .basket {
+    top:0px;
+}
 .basket a {
   text-decoration: none;
   color: inherit;
@@ -273,14 +276,19 @@ p {
 .item_personal_menu ul li {
   width: 303px;
 }
-@media only screen and (max-width: 1325px) {
+@media only screen and (max-width: 1330px) {
   .wrapper .block_1 .logo {
-    margin-right: 140px;
+    margin-right: 90px;
   }
 }
 @media only screen and (max-width: 1210px) {
   .wrapper .block_1 .logo {
-    margin-right: 90px;
+    margin-right: 60px;
+  }
+}
+@media only screen and (max-width: 1180px) {
+  .wrapper .block_1 .logo {
+    margin-right: 30px;
   }
 }
 @media only screen and (max-width: 1150px) {
@@ -311,12 +319,14 @@ p {
 }
 @media only screen and (max-width: 1024px) {
   .wrapper .block_1 .logo {
-    margin-right: 70px;
+    margin-right: 15px;
+  }
+  .mega_menu > li + li {
+      margin-left:14px;
   }
 }
 @media only screen and (max-width: 978px) {
   .wrapper .block_1 .logo {
-    margin-right: 25px;
   }
 }
 @media only screen and (max-width: 950px) {
@@ -336,9 +346,20 @@ p {
     margin-right: 8px;
   }
 }
+@media only screen and (max-width: 680px) { 
+    .bs_link {
+    margin-right: 320px;
+    }
+}
 @media only screen and (max-width: 640px) {
   .bs_link {
-    display: none;
+    position: absolute;
+    right: 0px;
+    margin-right: 223px;
+    margin-top: 8px;
+    top: 0px;
+    font-size:20px;
+
   }
   .basket {
     z-index: 0;
