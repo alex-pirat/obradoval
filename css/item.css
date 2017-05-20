@@ -638,7 +638,7 @@ line-height: 18px;
 }
 
 .products_item_status, .products_item_spec {
-    font-weight: 600;
+/*    font-weight: 600;*/
 }
 .slider-nav .slick-slide {
     cursor: pointer;

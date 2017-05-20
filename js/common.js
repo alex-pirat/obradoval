@@ -1,48 +1,117 @@
 $(function() {
     
+   $('.mega_menu > li > ul').parent('li').find('a').addClass('hasSub');
+
+
+
+    
+    
+    var lastScrollTop = 0;
     var wh = $(window).outerHeight();
    
    
-    $(window).scroll(function(){
+    $(window).scroll(function(event){
    var st = $(this).scrollTop();     
    var top_menu = $('.top_menu'),
    wrap_top_menu = $('.wrap_top_menu'),
    block_1 = $('.block_1'),
    wrap_block_1 = $('.wrap_block_1'),
+   wrap_block_1 = $('.wrap_block_1'),
    auth_reg_block = $('.auth_reg_block'),
+   wrap_auth_reg_block = $('.wrap_auth_reg_block'),
    backout = $('.backout'),
    gray_block = $('.gray_block'),
    wrap_gray_block = $('.wrap_gray_block'),
    menu_mobile_phone = $('.menu_mobile_phone'),
    wrapper_full = $('.wrapper.full');
    
-   var scroll = $(window).scrollTop();
+   
+   
+   
 
 
   
   /* block_1 start*/
-    if (scroll >= top_menu.outerHeight()) {
-      top_menu.addClass('fixed');
+    //if (st >= top_menu.outerHeight()) {
+    if (st > 0) {
+      wrap_top_menu.addClass('fixed');  
       wrap_block_1.addClass('fixed');
-      auth_reg_block.addClass('fixed');
+      wrap_auth_reg_block.addClass('fixed');
       backout.addClass('fixed');
+ 
       wrap_gray_block.addClass('fixed');
+      wrap_gray_block.addClass('unvis');
+      wrap_gray_block.addClass('pos_0');
+      
      // wrapper_full.css('padding-top', wrapper_full.outerHeight() + block_1.outerHeight() + gray_block.outerHeight()  + 'px');
       wrapper_full.addClass('step_1');
+      
+      wrap_top_menu.addClass('unvis');
+     
+      wrap_block_1.addClass('pos_0');
+      backout.addClass('pos_0');
+      
+     
+      
+      
   }
   else {
-      top_menu.removeClass('fixed');
+      wrap_top_menu.removeClass('fixed'); 
       wrap_block_1.removeClass('fixed');
-      auth_reg_block.removeClass('fixed'); 
+      wrap_auth_reg_block.removeClass('fixed'); 
       backout.removeClass('fixed'); 
+      
       wrap_gray_block.removeClass('fixed');
-     // wrapper_full.css('padding-top', 0 + 'px' );
+      wrap_gray_block.removeClass('unvis');
+      wrap_gray_block.removeClass('pos_0');
+      
       wrapper_full.removeClass('step_1');
+
+      wrap_top_menu.removeClass('unvis');
+  
+      wrap_block_1.removeClass('pos_0');
+      backout.removeClass('pos_0');
+      
+      
+      
+     
+      
   }
+  
+  
+   
+       if (st > lastScrollTop){
+       // downscroll code
+            } else {
+                
+      wrap_gray_block.removeClass('unvis');
+   // wrap_gray_block.removeClass('pos_0');
+   // wrap_top_menu.removeClass('unvis');
+   // wrap_block_1.removeClass('pos_0');
+   // backout.removeClass('pos_0');
+         
+                
+      // upscroll code
+   }
    /* block_1 end */
+   
+   lastScrollTop = st;
+
   
   
 });
+
+
+$(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+       // downscroll code
+   } else {
+      // upscroll code
+   }
+   lastScrollTop = st;
+});
+
   
   
  
@@ -89,6 +158,8 @@ $(window).load(function() {
   if($(window).outerWidth() >= 950 && $(window).outerHeight() >=600 ) {
       $('.mega_menu > li > ul .width_1').css('height','auto'); 
   }
+  
+  
   
     
   
@@ -143,21 +214,26 @@ $(window).resize(function(){
 	
 	// datepicker
      
-	$( "#datepicker" ).datepicker({
-        	
-         beforeShow : function(){
-           if(!$('.datepicker_wrapper').length){
+	
+        
+        
+        $('#datepicker').datepicker({
+   beforeShow: function (input, inst) {
+       if(!$('.datepicker_wrapper').length){
                   $('#ui-datepicker-div').wrap('<span class="datepicker_wrapper"></span>');
             }
             $('.label_datepicker').addClass('cselect'); 
-        },        
-     
-         onClose: function (dateText, inst) {
-        var date = $(this).val();
-        $("#datepicker").val(date.toString());
-        $('.label_datepicker').removeClass('cselect');     
-        }
-	}).datepicker("setDate", new Date());
+              var offset = $(input).offset();
+         var height = $(input).height();
+                    
+             inst.dpDiv.css({marginTop: -input.offsetHeight + 27 + 'px'});
+
+    }}).datepicker("setDate", new Date());
+
+        
+      
+        
+        
 	
 	
     // search
@@ -401,17 +477,18 @@ $(window).resize(function(){
         
         /*****start*** */
          $('.link_1').on('click',function() {
-              $('.auth_reg_block').slideDown();
-              var h_block_2 = $('.auth_reg_block').innerHeight();
+              $('.wrap_auth_reg_block').slideDown();
+              var h_block_2 = $('.wrap_auth_reg_block').innerHeight();
+             // $(window).scrollTop(1);
              return false;
           })
           
-          $('.auth_reg_block .btn_1.show_640').on('click',function() {
-              $(".auth_reg_block").slideUp()
+          $('.wrap_auth_reg_block .btn_1.show_640').on('click',function() {
+              $(".wrap_auth_reg_block").slideUp()
           })
               $(document).mouseup(function (e)
     {
-        var container = $(".auth_reg_block");
+        var container = $(".wrap_auth_reg_block");
 
         if (!container.is(e.target) // if the target of the click isn't the container...
             && container.has(e.target).length === 0) // ... nor a descendant of the container
@@ -422,7 +499,7 @@ $(window).resize(function(){
     
        $(document).keyup(function(e) {
         if (e.keyCode == 27) { // escape key maps to keycode `27`
-        $(".auth_reg_block").slideUp();
+        $(".wrap_auth_reg_block").slideUp();
        }
    });
     /****end**** */
@@ -497,14 +574,15 @@ $(window).resize(function(){
         
         
         var tzC =  function() {
-            if($('.menu_mobile_phone').css('z-index') == '299') {
+           
             $('.phone_number').click(function() {
                 
-             // $('.menu_mobile_phone').toggleClass('vibible');
+             $(window).scrollTop(1);   
+                
              $('.menu_mobile_phone').stop().slideToggle()
               
             })
-        }
+       
             }
          tzC();
         
