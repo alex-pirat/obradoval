@@ -2739,7 +2739,6 @@ reviews_footer .line:after {
 
 @media only screen and (max-width: 1199px) {
     .block_payment {
-/*        background:green;*/
     }
     .payment_list > li + li {
         
@@ -3216,7 +3215,6 @@ reviews_footer .line:after {
 		display: none;
 	}
         .block_payment {
-/*            background:pink;*/
         }
 	.block_payment .payment_item + .payment_item {
 		margin-left: 10px;
@@ -3405,7 +3403,6 @@ reviews_footer .line:after {
     
     
         .block_payment {
-/*            background:blue;*/
         }
         
         .block_payment .btn_1.hidden_1439 {  
