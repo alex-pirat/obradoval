@@ -3413,11 +3413,11 @@ reviews_footer .line:after {
 	.block_payment .payment_item + .payment_item {
 		margin-left: 3%;
 	}
-        .content .block_payment  .payment_item {
+        .block_payment .row  .payment_item {
             width:30%;
             
         }
-        .content .block_payment  .payment_item:nth-child(3n + 1) {
+         .block_payment .row  .payment_item:nth-child(3n + 1) {
             clear:left;
         }
 	.footer .logo {
