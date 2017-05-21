@@ -75,6 +75,7 @@
 }
 .city_item_list > li > a:hover {
     text-decoration: underline;
+    color:#ff4f12;
 }
 .city_item_list > li + li {
 	margin-top: 8px;
@@ -117,10 +118,8 @@
 	z-index: 999;
 }
 .city_basket_tmd .basket_bss {
-	right: 115px;
 }
 .city_basket_tmd .basket_btn {
-	right: 115px;
 	position: relative;
 }
 @media(max-width: 998px) {
@@ -151,12 +150,7 @@
 	}
 }
 @media(max-width: 640px) {
-	.city_basket_tmd .basket_bss {
-		right: 115px !important;
-	}
-	.city_basket_tmd .basket_btn {
-		right: 115px !important;
-	}
+	
 	.item_bs_link {
     position: absolute;
     right: 0px;

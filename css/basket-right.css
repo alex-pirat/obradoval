@@ -1,5 +1,8 @@
 #basket_tmd {
-  display: none;
+    display: none;
+    position: absolute;
+    right: 0;
+    overflow-y:auto;
 }
 p {
   margin: 0;
@@ -519,7 +522,6 @@ p {
   .basket .catalog_basket_tmd .basket_bss {
     position: relative;
     width: 303px;
-    right: 90px;
     height: 101px;
   }
   .basket .catalog_basket_tmd .basket_bss h6 {
@@ -548,7 +550,6 @@ p {
   .basket .catalog_basket_tmd .basket_btn {
     text-align: center;
     width: 303px;
-    right: 90px;
     height: 137px;
     position: relative;
   }
@@ -569,12 +570,7 @@ p {
   }
 }
 @media only screen and (max-width: 600px) {
-  .basket .catalog_basket_tmd .basket_bss {
-    right: 100px;
-  }
-  .basket .catalog_basket_tmd .basket_btn {
-    right: 100px;
-  }
+ 
 }
 @media only screen and (max-width: 560px) {
   .basket_name {
@@ -712,12 +708,7 @@ p {
   }
 }
 @media only screen and (max-width: 406px) {
-  .basket .catalog_basket_tmd .basket_bss {
-    right: 124px;
-  }
-  .basket .catalog_basket_tmd .basket_btn {
-    right: 124px;
-  }
+
 }
 @media only screen and (max-width: 387px) {
   .basket_bss {
@@ -769,18 +760,6 @@ p {
   }
 }
 @media only screen and (max-width: 370px) {
-  .basket .catalog_basket_tmd .basket_bss {
-    right: 144px;
-  }
-  .basket .catalog_basket_tmd .basket_btn {
-    right: 144px;
-  }
+ 
 }
-@media only screen and (max-width: 340px) {
-  .basket .catalog_basket_tmd .basket_bss {
-    right: 159px;
-  }
-  .basket .catalog_basket_tmd .basket_btn {
-    right: 159px;
-  }
-}
+

@@ -256,9 +256,6 @@ $(window).resize(function(){
         }
 
         $('.js_search_button').click(function() {
-            
-  
-            
          
            if(!$('.search_block').hasClass('show_search_block')) {
                searchBox('right')
@@ -281,6 +278,87 @@ $(window).resize(function(){
      
 	
         // search end
+        
+       //#basket_tmd start 
+       var detectBasket = function() {
+       var wh = $(window).outerHeight();
+       var basket_h = $('.basket').outerHeight();
+       var basket_btn = $('.basket_btn').outerHeight();
+       
+       var bth = $('#basket_tmd').outerHeight() ;
+       var btval = 0;
+       if(wh >= bth  ) {
+           
+           btval = bth  ;
+       }
+       if(wh <= bth  ) {
+           
+          btval = wh -  basket_h;
+       }
+           
+        $('#basket_tmd').css('height',btval + 'px');
+        //console.log(btval);
+       }
+       
+       detectBasket();
+       $(window).on('resize', function() {
+           
+          //not working ((( 
+          detectBasket();
+       });
+       
+       
+       window.addEventListener("resize", function() {
+    detectBasket();
+    //alert('change')
+
+    }, false);
+    
+       
+      
+       
+          var backet_Tmd = function(direction) {
+       
+       // Set the effect type
+    var effect = 'slide';
+
+    // Set the options for the effect type chosen
+    var options = { direction: direction };
+
+    // Set the duration (default: 400 milliseconds)
+    var duration = 400;
+
+    $("#basket_tmd").toggle(effect, options, duration);
+    $('#basket_tmd').toggleClass('show_basket_block');
+    
+   
+	
+        }
+        
+        $(".link_basket_tmd").click(function(){
+               backet_Tmd('right');
+                return false;
+   
+    });
+    
+    $(document).mouseup(function (e) {
+                
+        var container = $("#basket_tmd, .link_basket_tmd");
+       
+        if (!container.is(e.target) // if the target of the click isn't the container...
+            && container.has(e.target).length === 0) // ... nor a descendant of the container
+        {
+        if($('#basket_tmd').hasClass('show_basket_block')) {
+             backet_Tmd('right')
+              
+          }   
+
+        }
+    });
+    
+    
+
+    //#basket_tmd end
         
 	// slick
 	$('.js_slick_slider').slick({
@@ -620,15 +698,11 @@ $(window).resize(function(){
      
     
     $(".link_personal").on('click',function(){
-  $(this).next(".personal_menu").slideToggle();
-  $('#basket_tmd').slideUp();
+        
+  $(".personal_menu").slideToggle();
   return false;
-});
-$(".link_basket_tmd").click(function(){   
-  $(this).next("#basket_tmd").slideToggle();
-  $('.personal_menu').slideUp();
-   return false;
-});
+    });
+
 
 jQuery(function($){
   $(document).mouseup(function (e){ // событие клика по веб-документу
@@ -641,16 +715,7 @@ jQuery(function($){
   });
 })
 
-jQuery(function($){
-  $(document).mouseup(function (e){ // событие клика по веб-документу
-    var box = $("#basket_tmd, .link_basket_tmd"); // тут указываем ID элемента
-    if (!box.is(e.target) // если клик был не по нашему блоку
-        && box.has(e.target).length === 0) { // и не по его дочерним элементам
-      $("#basket_tmd").slideUp(); // скрываем его
 
-    }
-  });
-})
         
  
 
